@@ -6,22 +6,11 @@ jobs:
     docker:
       - image: node:16.16.0
 
-    working_directory: ~/bingocard_frontend
+    working_directory: CardGenFrontend
 
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - bingocard_frontend-{{ checksum "package.json" }}
-
       - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
       - run: npm run test
