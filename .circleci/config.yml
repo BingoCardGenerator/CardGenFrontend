@@ -6,10 +6,11 @@ jobs:
     docker:
       - image: node:16.16.0
 
-    working_directory: ~/CardGenFrontend/bingocard_frontend
+    working_directory: ~/bingocard_frontend
 
     steps:
       - checkout
+      - run: tree 
       - run: npm install
 
       # run tests!
