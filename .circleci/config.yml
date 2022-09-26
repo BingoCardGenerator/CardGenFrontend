@@ -10,7 +10,6 @@ jobs:
 
     steps:
       - checkout
-      - run: tree 
       - run: npm install
 
       # run tests!
