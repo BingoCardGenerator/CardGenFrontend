@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: node:16.16.0
 
-    working_directory: CardGenFrontend
+    working_directory: CardGenFrontend/bingocard_frontend
 
     steps:
       - checkout
