@@ -1,7 +1,9 @@
+import TopBar from "../Components/TopBar";
+
 function LandingPage() {
   return (
     <div>
-      <p>LandingPage</p>
+      <TopBar />
     </div>
   );
 }

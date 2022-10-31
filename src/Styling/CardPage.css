@@ -1,0 +1,4 @@
+.cap-main-content {
+  display: flex;
+  flex-direction: column;
+}
