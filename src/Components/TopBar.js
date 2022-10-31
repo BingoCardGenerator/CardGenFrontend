@@ -1,8 +1,8 @@
 import "../Styling/TopBar.css";
 import { useNavigate } from "react-router-dom";
-
 function TopBar() {
   let navigate = useNavigate();
+
   const RedirectToChallengePage = () => {
     navigate("/Challenge");
   };
@@ -11,8 +11,15 @@ function TopBar() {
     navigate("/Card");
   };
 
+  const RedirectToLandingPage = () => {
+    navigate("/Home");
+  };
+
   return (
     <div className="tb-main">
+      <button className="tb-pagebutton" onClick={RedirectToLandingPage}>
+        LandingPage
+      </button>
       <button className="tb-pagebutton" onClick={RedirectToChallengePage}>
         Challenges
       </button>

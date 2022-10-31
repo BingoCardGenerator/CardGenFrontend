@@ -7,7 +7,7 @@ function CardPage() {
   return (
     <div className="cap-main-content">
       <TopBar />
-      <p>CardPage</p>
+      <p>Sorry but this page is not yet implemented. Come back later</p>
     </div>
   );
 }

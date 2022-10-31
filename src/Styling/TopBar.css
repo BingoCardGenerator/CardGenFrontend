@@ -9,8 +9,6 @@
   min-width: var(--TopBarWidth);
   min-height: var(--TopBarHeight);
 
-  position: fixed;
-
   display: flex;
   flex-direction: row;
 }
