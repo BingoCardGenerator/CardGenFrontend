@@ -1,0 +1,31 @@
+:root {
+  --TopBarWidth: 100vw;
+  --TopBarHeight: 3em;
+  --MainCollor: #ff5147;
+}
+
+.tb-main {
+  background-color: var(--MainCollor);
+  min-width: var(--TopBarWidth);
+  min-height: var(--TopBarHeight);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.tb-pagebutton {
+  background-color: var(--MainCollor);
+  min-height: 100%;
+  border-radius: 0.25em;
+  margin-left: 1em;
+  border: none;
+
+  align-self: center;
+  font-family: Helvetica;
+  font-size: large;
+}
+
+.tb-pagebutton:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}

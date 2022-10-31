@@ -6,10 +6,10 @@ jobs:
     docker:
       - image: node:16.16.0
 
-    working_directory: 
+    working_directory:
     steps:
       - checkout
       - run: npm install
 
       # run tests!
-      - run: npm run test
+      - run: npm run test --passWithNoTests
