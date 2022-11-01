@@ -3,6 +3,7 @@ import { GetAllChallenges } from "../Components/ChallengeApiService";
 import { useState, useEffect, useRef } from "react";
 
 import "../Styling/ChallengePage.css";
+import "../Styling/Variables.css";
 
 function ChallengePage() {
   const [challenges, setChallenges] = useState([]);
@@ -24,10 +25,11 @@ function ChallengePage() {
     <div className="chp-main-content">
       <TopBar />
       <div className="chp-challenge-container">
+        <div className="chp-challenge-header">Challenge Category (NYI)</div>
         {challengeref.current.map((challenge) => (
-          <p className="chp-challenge" key={challenge.id}>
+          <li className="chp-challenge" key={challenge.id}>
             {challenge.name}
-          </p>
+          </li>
         ))}
       </div>
     </div>

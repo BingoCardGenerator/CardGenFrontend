@@ -1,0 +1,9 @@
+:root {
+  /* General variables */
+  --MainColor: #ff5147;
+  --MainBorderRadius: 0.28em;
+
+  /* Top bar variables */
+  --TopBarWidth: 100vw;
+  --TopBarHeight: 3em;
+}

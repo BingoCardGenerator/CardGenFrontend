@@ -1,22 +1,19 @@
-:root {
-  --TopBarWidth: 100vw;
-  --TopBarHeight: 3em;
-  --MainCollor: #ff5147;
-}
-
 .tb-main {
-  background-color: var(--MainCollor);
+  background-color: var(--MainColor);
   min-width: var(--TopBarWidth);
   min-height: var(--TopBarHeight);
 
   display: flex;
   flex-direction: row;
+
+  border-bottom-left-radius: var(--MainBorderRadius);
+  border-bottom-right-radius: var(--MainBorderRadius);
 }
 
 .tb-pagebutton {
-  background-color: var(--MainCollor);
+  background-color: var(--MainColor);
   min-height: 100%;
-  border-radius: 0.25em;
+  border-radius: var(--MainBorderRadius);
   margin-left: 1em;
   border: none;
 

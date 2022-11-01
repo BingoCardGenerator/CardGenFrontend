@@ -1,4 +1,5 @@
 import "../Styling/TopBar.css";
+import "../Styling/Variables.css";
 import { useNavigate } from "react-router-dom";
 function TopBar() {
   let navigate = useNavigate();

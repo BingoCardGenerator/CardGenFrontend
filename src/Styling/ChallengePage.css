@@ -2,3 +2,33 @@
   display: flex;
   flex-direction: column;
 }
+
+.chp-challenge-container {
+  border: 0.1em solid black;
+  border-radius: var(--MainBorderRadius);
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 0.5em;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+
+  padding-bottom: 0.5em;
+
+  background-color: #d3d3d3;
+}
+
+.chp-challenge-header {
+  background-color: var(--MainColor);
+  border-bottom: 0.1em solid black;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+.chp-challenge {
+  margin-left: 0.5em;
+  font-family: Helvetica;
+  list-style-type: none;
+}
