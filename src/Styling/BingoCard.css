@@ -1,11 +1,8 @@
-.chp-main-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.chp-challenge-container {
+.bc-main-content {
   border: 0.1em solid black;
+  background-color: var(--MainComponentBackgroundColor);
   border-radius: var(--MainBorderRadius);
+
   display: flex;
   flex-direction: column;
   width: 20%;
@@ -14,11 +11,9 @@
   margin-top: 0.5em;
 
   padding-bottom: 0.5em;
-
-  background-color: #d3d3d3;
 }
 
-.chp-challenge-header {
+.bc-name-header {
   background-color: var(--MainColor);
   border-bottom: 0.1em solid black;
 
@@ -27,7 +22,7 @@
   width: 100%;
 }
 
-.chp-challenge {
+.bc-info {
   margin-left: 0.2em;
   font-family: Helvetica;
   list-style-type: none;
