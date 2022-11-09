@@ -1,6 +1,7 @@
 :root {
   /* General variables */
   --MainColor: #ff5147;
+  --MainComponentBackgroundColor: #d3d3d3;
   --MainBorderRadius: 0.28em;
 
   /* Top bar variables */

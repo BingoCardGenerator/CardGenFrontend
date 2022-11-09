@@ -1,6 +1,6 @@
 import TopBar from "../Components/TopBar";
-import { GetAllChallenges } from "../Components/ChallengeApiService";
-import { useState, useEffect, useRef } from "react";
+import { GetAllChallenges } from "../Services/ChallengeApiService";
+import { useState, useEffect } from "react";
 
 import "../Styling/ChallengePage.css";
 import "../Styling/Variables.css";
@@ -8,13 +8,9 @@ import "../Styling/Variables.css";
 function ChallengePage() {
   const [challenges, setChallenges] = useState([]);
 
-  const challengeref = useRef([]);
-
   useEffect(() => {
     GetTheChallenges();
-    challengeref.current = challenges;
-    console.log(challengeref.current);
-  }, [challenges]);
+  }, []);
 
   async function GetTheChallenges() {
     const challengelist = await GetAllChallenges();
@@ -26,7 +22,7 @@ function ChallengePage() {
       <TopBar />
       <div className="chp-challenge-container">
         <div className="chp-challenge-header">Challenge Category (NYI)</div>
-        {challengeref.current.map((challenge) => (
+        {challenges.map((challenge) => (
           <li className="chp-challenge" key={challenge.id}>
             {challenge.name}
           </li>
