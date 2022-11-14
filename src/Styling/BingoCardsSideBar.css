@@ -1,4 +1,6 @@
-.bp-main-content {
+.cs-main-content {
   display: flex;
   flex-direction: column;
+
+  min-width: 20%;
 }

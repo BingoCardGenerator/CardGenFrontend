@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import LandingPage from "./LandingPage";
 import ChallengePage from "./ChallengePage";
-import CardPage from "./CardPage";
+import BingoCardPage from "./BingoCardPage";
 
 function RouterPage() {
   return (
@@ -11,7 +11,7 @@ function RouterPage() {
         <Route path="/" element=<LandingPage /> />
         <Route path="/Home" element=<LandingPage /> />
         <Route path="/Challenge" element=<ChallengePage /> />
-        <Route path="/Card" element=<CardPage /> />
+        <Route path="/BingoCards" element=<BingoCardPage /> />
         <Route path="*" element=<ErrorPage /> />
       </Routes>
     </div>

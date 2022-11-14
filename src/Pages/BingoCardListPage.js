@@ -6,7 +6,7 @@ import { GetAllBingoCards } from "../Services/CardApiService";
 
 import "../Styling/CardPage.css";
 
-function CardPage() {
+function BingoCardListPage() {
   const [bingoCards, setBingoCards] = useState([]);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ function CardPage() {
   );
 }
 
-export default CardPage;
+export default BingoCardListPage;

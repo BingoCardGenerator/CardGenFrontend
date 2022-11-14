@@ -9,7 +9,7 @@ function TopBar() {
   };
 
   const RedirectToCardPage = () => {
-    navigate("/Card");
+    navigate("/BingoCards");
   };
 
   const RedirectToLandingPage = () => {
@@ -25,7 +25,7 @@ function TopBar() {
         Challenges
       </button>
       <button className="tb-pagebutton" onClick={RedirectToCardPage}>
-        Cards
+        Bingo Cards
       </button>
     </div>
   );
