@@ -1,6 +1,23 @@
 .cs-main-content {
   display: flex;
   flex-direction: column;
+  gap: 0.2em;
 
-  min-width: 20%;
+  min-width: var(--SideBarWidth);
+  max-width: var(--SideBarWidth);
+  min-height: var(--SideBarHeight);
+  max-height: var(--SideBarHeight);
+
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.cs-bingocard {
+  margin-left: 0.5em;
+}
+
+.cs-bingocard:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

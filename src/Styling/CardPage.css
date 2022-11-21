@@ -1,4 +1,9 @@
 .bp-main-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.bp-card-container {
+  min-width: calc(100% - var(--SideBarWidth));
+  max-width: calc(100% - var(--SideBarWidth));
 }

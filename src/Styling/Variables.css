@@ -7,4 +7,8 @@
   /* Top bar variables */
   --TopBarWidth: 100vw;
   --TopBarHeight: 3em;
+
+  /*SideBar variables */
+  --SideBarWidth: 20%;
+  --SideBarHeight: calc(100vh - var(--TopBarHeight));
 }

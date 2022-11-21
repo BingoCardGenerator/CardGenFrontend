@@ -1,6 +1,7 @@
 import TopBar from "../Components/TopBar";
 
 import "../Styling/TopBar.css";
+
 function ErrorPage() {
   return (
     <div>
