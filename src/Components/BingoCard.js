@@ -1,21 +1,30 @@
 import "../Styling/BingoCard.css";
 import "..//Styling/Variables.css";
 import { useEffect, useState } from "react";
+import { GetCardChallenges } from "../Services/CardApiService";
 
-function BingoCard(card, challengelist) {
+function BingoCard(card) {
   const { id, name, columns, rows } = card.card;
-  const challengeids = challengelist.challengelist;
 
+  const [challengeIds, setChallengeIds] = useState();
   const [challenges, setChallenges] = useState([]);
   const [columnlist, setColumnList] = useState([]);
 
   useEffect(() => {
-    DevideIntoColumns();
+    GetMyChallenges();
     // eslint-disable-next-line
-  }, []);
+  }, [id]);
+
+  async function GetMyChallenges() {
+    let chalobj = await GetCardChallenges(id);
+    let chalids = [];
+    chalobj.map((id) => chalids.push(id.challengeId));
+    console.log(chalids);
+    setChallengeIds(chalids);
+  }
 
   function HasChallenges() {
-    if (challengeids === undefined || challengeids.length === 0) {
+    if (challengeIds === undefined || challengeIds.length === 0) {
       console.log("No challenges");
       return false;
     }
@@ -24,10 +33,9 @@ function BingoCard(card, challengelist) {
 
   function DevideIntoColumns() {
     let col = [];
-    let chal = challengeids;
     let row = [];
+    let chal = challengeIds;
 
-    console.log("Code reached");
     if (!HasChallenges()) return;
 
     for (let c = 1; c <= columns; c++) {
@@ -37,7 +45,6 @@ function BingoCard(card, challengelist) {
         rows: { row },
       });
     }
-    console.log(col);
 
     function FillRow() {
       row = [];
@@ -58,9 +65,11 @@ function BingoCard(card, challengelist) {
         {/* <table className="bc-challenge-table">
           
         </table> */}
-        {challengeids.map((id) => (
-          <div key={id}> id</div>
-        ))}
+        {challengeIds !== undefined || challengeIds !== [] ? (
+          challengeIds.map((cid) => <div key={cid}> id</div>)
+        ) : (
+          <div>no challenges</div>
+        )}
       </div>
     </div>
   );

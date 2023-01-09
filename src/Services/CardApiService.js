@@ -11,6 +11,5 @@ export async function GetCardChallenges(cardid) {
   const response = await axios.get(
     `${apihost}/challenges/bingocardchallenges?cardid=${cardid}`
   );
-  console.log(response.data);
   return response.data;
 }

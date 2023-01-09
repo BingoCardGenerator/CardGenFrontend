@@ -7,3 +7,7 @@ export async function GetAllChallenges() {
   const response = await axios.get(`${apihost}/challenges`);
   return response.data;
 }
+
+// export async function GetChallenge(){
+//   const response = await axios.get(`${apihost}/`)
+// }
